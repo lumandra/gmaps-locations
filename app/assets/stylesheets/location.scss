@@ -1,0 +1,27 @@
+#name-field {
+  display: inline-block;
+  margin-bottom: 10px;
+  width: 30%;
+}
+
+.title {
+  display: inline-block;
+}
+
+.btn-edit {
+  float: right;
+  margin-top: 15px;
+}
+
+body[data-page='LocationIndex'] {
+  table {
+    th, td {
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .action {
+      width: 200px
+    }
+  }
+}

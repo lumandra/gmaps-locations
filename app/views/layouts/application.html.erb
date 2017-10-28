@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gmaps Locations</title>
+    <%= csrf_meta_tags %>
+    <%= include_gon %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD-WiMcT6mKg0Fs-YOymfUFNP0RFi7wOD0&sensor=false', async: 'defer' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body data-page="<%= controller_name.camelize + action_name.camelize %>" data-controller="<%= body_controller %>">
+    <%= render partial: 'partials/nav' %>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

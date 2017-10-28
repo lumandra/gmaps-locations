@@ -1,0 +1,21 @@
+<table class="table table-responsive table-bordered">
+  <thead>
+    <th>Name</th>
+    <th>Coordinates</th>
+    <th class="action">Action</th>
+  </thead>
+  <tbody>
+    <%@locations.each do |l| %>
+      <tr>
+        <td><%=l.name %></td>
+        <td><%=l.area %></td>
+        <td>
+          <%= link_to 'Show', location_path(l), class: 'btn btn-primary btn-sm' %>
+          <%= link_to 'Edit', edit_location_path(l), class: 'btn btn-default btn-sm' %>
+          <%= link_to 'Delete', location_path(l), class: 'btn btn-danger btn-sm', data: { method: :delete } %>
+        </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>
+

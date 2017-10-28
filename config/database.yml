@@ -1,0 +1,18 @@
+default: &default
+ adapter: postgis
+ encoding: unicode
+ pool: 5
+
+development:
+ <<: *default
+ database: gmaps_locations_development
+
+test:
+  <<: *default
+  database:  gmaps_locations_test
+
+production:
+  <<: *default
+  database: gmaps_locations_production
+  username: user_name
+  password: <%= ENV['SPA_APP_DATABASE_PASSWORD'] %>

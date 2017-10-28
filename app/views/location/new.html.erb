@@ -1,0 +1,5 @@
+<div class="text-center" >
+  <%= form_for @location, url: location_index_url, method: :post do |f| %>
+    <%=render partial: 'form', locals: {f: f} %>
+  <% end %>
+</div>
